@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document — firststef</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="vpage">
+<div class="vbar">
+  <a class="brand" href="index.html"><b>first</b>stef</a>
+  <span class="vtitle" id="vtitle"><span>&#9670;</span> Document</span>
+  <span class="vspace"></span>
+  <a class="btn" id="dl" href="#" download>Download</a>
+  <a class="btn" href="index.html">Back</a>
+</div>
+<iframe class="vframe" id="vframe" title="Document viewer"></iframe>
+<div class="vfallback" id="vfallback" style="display:none;">
+  <p>Your browser could not display the document inline.</p>
+  <a class="btn solid" id="open2" href="#" target="_blank" rel="noopener">Open the PDF</a>
+</div>
+<script>
+(function(){
+  var params = new URLSearchParams(location.search);
+  var doc = params.get('doc') || '';
+  var title = params.get('title') || 'Document';
+  // only allow local PDFs under docs/ (no external URLs)
+  var safe = /^docs\/[A-Za-z0-9_\-]+\.pdf$/.test(doc);
+  var titleEl = document.getElementById('vtitle');
+  titleEl.innerHTML = '<span>&#9670;</span> ' + title.replace(/[<>&]/g,'');
+  document.title = title + ' — firststef';
+  if(!safe){
+    document.getElementById('vframe').style.display='none';
+    document.getElementById('vfallback').style.display='block';
+    document.getElementById('open2').style.display='none';
+    document.querySelector('#vfallback p').textContent='Document not found.';
+    return;
+  }
+  document.getElementById('vframe').src = doc + '#view=FitH';
+  document.getElementById('dl').href = doc;
+  document.getElementById('open2').href = doc;
+  // fallback stays hidden unless the PDF genuinely fails to load
+  document.getElementById('vframe').addEventListener('error', function(){
+    document.getElementById('vframe').style.display='none';
+    document.getElementById('vfallback').style.display='block';
+  });
+})();
+</script>
+</body>
+</html>

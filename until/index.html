@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streamer UNTIL — Technical Narrative — firststef</title>
+<meta name="description" content="Streamer UNTIL: a livestream horror where the chat is the antagonist. A node-based dialogue tool and 289 barks, owned by firststef on a four-person team.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><b>first</b>stef</a>
+    <nav class="nav">
+      <a href="#barks">The barks</a>
+      <a href="#tool">The tool</a>
+      <a href="#how">How it works</a>
+      <a href="../index.html">All work</a>
+    </nav>
+  </div>
+</div>
+
+<header class="case-hero wrap">
+  <span class="kicker">Case study</span>
+  <h1>Streamer UNTIL</h1>
+  <p class="lede">A first-person horror game where you livestream from an abandoned bunker and a simulated chat reacts to everything you do. The chat is not decoration. It is the antagonist.</p>
+  <p class="team">Four-person game jam team. I owned the narrative system end to end: the writing, the tool it is written in, and the simulation underneath it.</p>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="prose">
+      <p>The game jam's theme was social media. I wanted to build horror around it, so I made the player a small streamer broadcasting from an abandoned building for views. That gave the game two kinds of fear. One is the monster in the dark. The other is social pressure, which became the second theme of the game: the chat keeps demanding, and you keep performing, because the moment people stop watching you are done.</p>
+      <p>A live chat on screen at all times is a problem for horror, which usually needs isolation. So the chat is not company, it is the threat. The viewership meter is a lifeline, and if it hits zero the stream ends. You raise it by doing what the chat dares you to do, but the same noise that keeps you alive draws the monster, and the higher your viewership climbs, the harder it hunts you.</p>
+      <p><strong>Every line the chat says has a price.</strong> Writing a bark is not writing flavor, it is deciding how many viewers a moment wins or loses, and how much danger that buys.</p>
+    </div>
+  </div>
+</section>
+
+<section id="barks">
+  <div class="wrap">
+    <div class="section-head"><span class="num">01</span><h2>The bark sheet</h2></div>
+    <div class="prose">
+      <p>The chat runs on 289 authored lines: reactions, goads, dares, and the panicked floods that hit when the monster is near. Each line carries a trigger, a viewership effect, and a tone. The full sheet reads like a production bark document, grouped by phase and trigger.</p>
+    </div>
+    <a class="doc-figure" href="../docs/until-bark-sheet.pdf" target="_blank" rel="noopener">
+      <img src="../assets/img/until-barks-teaser.png" alt="First page of the Streamer UNTIL bark sheet">
+      <figcaption>Page one of nineteen. Trigger, gameplay context, intent, viewership effect, and the line itself.</figcaption>
+    </a>
+    <div class="cta" style="margin-top:24px;">
+      <a class="btn" href="../docs/until-bark-sheet.pdf" download>Download the bark sheet</a>
+      <a class="link" href="../docs/until-bark-sheet.csv" download>As a spreadsheet</a>
+    </div>
+  </div>
+</section>
+
+<section id="tool">
+  <div class="wrap">
+    <div class="section-head"><span class="num">02</span><h2>The tool I wrote them in</h2></div>
+    <div class="prose">
+      <p>I did not hand-code every reaction. I built a node-based chat graph editor in Unity, so a teammate who does not program can follow a trigger through its conditions and rewrite what the chat says. Fifteen node types compose the whole behavior: triggers, message pools, timed dares, viewer-count effects, flags and conditions, and floods.</p>
+    </div>
+    <div class="shots">
+      <figure>
+        <img src="../assets/img/chatgraph-overview.png" alt="The whole ChatGraph, organized into framed zones">
+        <figcaption>The whole graph. Each frame is a zone of the game: the Theater Foyer, the Theater Hall, the Entity Chase, the bunker.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/chatgraph-detail.png" alt="A readable zone of the chat graph up close">
+        <figcaption>One zone up close. A trigger runs a dare, message pools speak the reactions, and viewer-count nodes price each beat.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="section-head"><span class="num">03</span><h2>How it works</h2></div>
+    <div class="prose">
+      <p>A trigger fires when the player gazes at something, idles, or trips a volume, and publishes onto a shared event bus. The chat manager runs the matching branch of the graph, then asks a viewer simulation which personality would speak this kind of line. Viewers carry five traits, so a jump scare tends to come from the fearful and a dare from the trollish and the brave. The line is parsed for its emoji and mentions, rendered into the feed, and its viewership effect is layered onto a meter that ends the run at zero and, on the way there, decides how hard the monster hunts. Toxic attention, made systemic.</p>
+    </div>
+    <div class="cta" style="margin-top:26px;">
+      <a class="btn" href="../viewer.html?doc=docs/until-ndd.pdf&amp;title=Streamer%20UNTIL">Read the full design document</a>
+      <a class="link" href="../index.html">Back to all work</a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  firststef, narrative designer and gameplay programmer.
+</footer>
+
+</body>
+</html>

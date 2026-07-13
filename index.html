@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>firststef — narrative designer</title>
+<meta name="description" content="Narrative design portfolio of firststef. Story as infrastructure: branching narrative written and built into the systems that carry it.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand"><b>first</b>stef</span>
+    <nav class="nav">
+      <a href="#documents">Documents</a>
+      <a href="#until">Narrative systems</a>
+      <a href="#projects">Personal projects</a>
+      <a href="#longform">Long form</a>
+      <a href="#resume">Résumé</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero wrap">
+  <span class="kicker">Narrative designer &amp; gameplay programmer</span>
+  <h1>I make systems feel as <em>magical</em> as their stories.</h1>
+  <p class="lede">Story as infrastructure, built alongside the systems, not layered on top. I write branching narrative and I build the engine that carries it.</p>
+</header>
+
+<!-- 01 DOCUMENTS -->
+<section id="documents">
+  <div class="wrap">
+    <div class="section-head"><span class="num">01</span><h2>Narrative design documents</h2></div>
+    <div class="grid cols-3">
+
+      <article class="card">
+        <a class="thumb" href="viewer.html?doc=docs/chessworlds-ndd.pdf&amp;title=ChessWorlds">
+          <img src="docs/thumbs/chessworlds.png" alt="ChessWorlds design document">
+        </a>
+        <div class="body">
+          <div class="tag">Fantasy tactics</div>
+          <h3>ChessWorlds</h3>
+          <p>Chess pieces come to life across four realms, and each faction's philosophy is its mechanic.</p>
+          <a class="go" href="viewer.html?doc=docs/chessworlds-ndd.pdf&amp;title=ChessWorlds">Read the document</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="thumb" href="viewer.html?doc=docs/teknika-ndd.pdf&amp;title=Teknika">
+          <img src="docs/thumbs/teknika.png" alt="Teknika design document">
+        </a>
+        <div class="body">
+          <div class="tag">Environmental storytelling</div>
+          <h3>Teknika</h3>
+          <p>A corporate wizard whose published research permanently reshapes the world. The Rule of Irreversibility as a hard system constraint.</p>
+          <a class="go" href="viewer.html?doc=docs/teknika-ndd.pdf&amp;title=Teknika">Read the document</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="thumb" href="viewer.html?doc=docs/until-ndd.pdf&amp;title=Streamer%20UNTIL">
+          <img src="docs/thumbs/until.png" alt="Streamer UNTIL design document">
+        </a>
+        <div class="body">
+          <div class="tag">Systems narrative</div>
+          <h3>Streamer UNTIL</h3>
+          <p>A livestream horror where the chat is the antagonist. The viewership meter keeps you alive and gets you killed.</p>
+          <a class="go" href="viewer.html?doc=docs/until-ndd.pdf&amp;title=Streamer%20UNTIL">Read the document</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 02 NARRATIVE SYSTEMS -->
+<section id="until">
+  <div class="wrap">
+    <div class="section-head"><span class="num">02</span><h2>Narrative systems</h2></div>
+    <div class="feature">
+      <div class="ft-body">
+        <span class="kicker">Streamer UNTIL</span>
+        <p class="ft-lead">A horror game about a streamer doing urban exploration in an abandoned building.</p>
+        <p>The game needed a chat system that gives the player dares based on the environment, then reacts to what they do. I designed and implemented it: a simulated live audience whose messages move a viewership meter, and the meter sets how hard the monster hunts you.</p>
+        <h3>I wrote the chat barks and the node system behind it.</h3>
+        <p>I built a node-based chat graph editor in Unity so my non-programmer teammates could rewrite the story without touching code, and I wrote the 289 lines that run through it.</p>
+        <div class="pill-row">
+          <span class="pill"><b>Node</b> chat graph editor</span>
+          <span class="pill"><b>Simulated</b> viewers</span>
+          <span class="pill"><b>289</b> barks</span>
+        </div>
+        <a class="btn" href="until/index.html">Open the case study</a>
+      </div>
+      <div class="ft-media">
+        <img src="assets/img/chatgraph-overview.png" alt="The ChatGraph node editor in Unity">
+        <p class="ft-note">The chat graph. Each frame is a zone of the game, authored by hand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 PERSONAL PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head"><span class="num">03</span><h2>Personal projects</h2></div>
+    <div class="split">
+      <div class="media">
+        <img src="assets/img/chessworlds-shot1.png" alt="ChessWorlds, the King and the narrator">
+        <img src="assets/img/chessworlds-shot2.png" alt="ChessWorlds, in-game dialogue with an NPC">
+      </div>
+      <div class="body">
+        <h3>Games I build in my own time.</h3>
+        <p>Small games, most of them built around a world or a system I wanted to see exist.</p>
+        <div class="cta">
+          <a class="btn" href="games.html">See all my games</a>
+          <a class="link" href="https://firststef.itch.io/chessworlds" target="_blank" rel="noopener">Play Chess Worlds</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 LONG FORM -->
+<section id="longform">
+  <div class="wrap">
+    <div class="section-head"><span class="num">04</span><h2>Long form</h2></div>
+    <div class="split">
+      <div class="media resume-media">
+        <a class="doc-thumb" href="viewer.html?doc=docs/bits-defenders-chronicle.pdf&amp;title=Bits%20Defenders">
+          <img src="docs/thumbs/chronicle.png" alt="The Bits Defenders, cover">
+        </a>
+      </div>
+      <div class="body">
+        <div class="tag">Campaign chronicle</div>
+        <h3>The Bits Defenders</h3>
+        <p>A campaign I ran as Dungeon Master, written up as one continuous story across three arcs.</p>
+        <div class="cta">
+          <a class="btn" href="viewer.html?doc=docs/bits-defenders-chronicle.pdf&amp;title=Bits%20Defenders">Read the chronicle</a>
+          <a class="link" href="docs/bits-defenders-chronicle.pdf" download>Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 RÉSUMÉ -->
+<section id="resume">
+  <div class="wrap">
+    <div class="section-head"><span class="num">05</span><h2>Résumé</h2></div>
+    <div class="split">
+      <div class="media resume-media">
+        <a class="doc-thumb" href="viewer.html?doc=docs/resume.pdf&amp;title=R%C3%A9sum%C3%A9">
+          <img src="docs/thumbs/resume.png" alt="Résumé, first page">
+        </a>
+      </div>
+      <div class="body">
+        <div class="cta">
+          <a class="btn" href="viewer.html?doc=docs/resume.pdf&amp;title=R%C3%A9sum%C3%A9">View résumé</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <span class="kicker">Let's build</span>
+    <h2>Your story stops being decoration. It becomes the thing the game is built on.</h2>
+    <p>If that is the collaborator you need, reach out.</p>
+    <div class="cta">
+      <a href="https://firststef.itch.io" target="_blank" rel="noopener">itch.io</a>
+      <a href="https://github.com/firststef" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:firstbossspike@gmail.com">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  firststef, narrative designer and gameplay programmer.
+</footer>
+
+</body>
+</html>
