@@ -1,4 +1,4 @@
-/* firststef — narrative design portfolio
+/* firststef, narrative design portfolio
    dark theme, warm not cold. characterful serif (Fraunces), warm red accent, solid panels (no thin borders, no gold). */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
 
@@ -167,3 +167,19 @@ body.vpage{overflow:hidden;height:100vh;}
   box-shadow:var(--shadow);transition:transform .18s ease;}
 .doc-thumb:hover{transform:translateY(-4px);}
 .doc-thumb img{width:100%;display:block;border-radius:0;box-shadow:none;}
+
+/* ---- image lightbox ---- */
+img.zoomable{cursor:zoom-in;}
+img.zoomable:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+body.lb-open{overflow:hidden;}
+.lb{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:none;
+  align-items:center;justify-content:center;flex-direction:column;gap:14px;padding:28px;
+  background:rgba(8,10,12,.94);}
+.lb.on{display:flex;}
+.lb-img{max-width:96vw;max-height:84vh;width:auto;height:auto;object-fit:contain;
+  border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.6);cursor:zoom-out;}
+.lb-cap{color:var(--muted);font-size:.95rem;text-align:center;max-width:80ch;}
+.lb-full{color:var(--accent-2);margin-left:12px;white-space:nowrap;}
+.lb-close{position:absolute;top:18px;right:22px;background:var(--bg-3);color:var(--ink);
+  border:0;border-radius:4px;padding:8px 15px;font:inherit;font-size:.92rem;cursor:pointer;}
+.lb-close:hover{background:#39424a;}
