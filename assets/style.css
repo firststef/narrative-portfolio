@@ -183,3 +183,12 @@ body.lb-open{overflow:hidden;}
 .lb-close{position:absolute;top:18px;right:22px;background:var(--bg-3);color:var(--ink);
   border:0;border-radius:4px;padding:8px 15px;font:inherit;font-size:.92rem;cursor:pointer;}
 .lb-close:hover{background:#39424a;}
+
+/* Streamer UNTIL gameplay screenshots */
+.ft-media .ft-note + img{margin-top:26px;}
+.play-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.play-strip figure{margin:0;}
+.play-strip img{width:100%;display:block;border-radius:4px;box-shadow:var(--shadow);}
+.play-strip figcaption{color:var(--faint);font-size:1rem;margin-top:10px;line-height:1.5;font-style:italic;}
+.play-link{margin-top:22px;color:var(--faint);font-style:italic;}
+@media (max-width:840px){.play-strip{grid-template-columns:1fr;}}
