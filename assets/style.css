@@ -38,7 +38,7 @@ section{padding:72px 0;}
 .topbar .wrap{display:flex;align-items:center;gap:24px;height:66px;}
 .brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.35rem;letter-spacing:-.02em;color:var(--ink);}
 .brand b{color:var(--accent);}
-.nav{margin-left:auto;display:flex;gap:26px;}
+.nav{margin-left:auto;display:flex;gap:22px;}
 .nav a{font-family:'Newsreader',serif;font-style:italic;font-size:1.02rem;color:var(--muted);}
 .nav a:hover{color:var(--accent-2);}
 
@@ -192,3 +192,9 @@ body.lb-open{overflow:hidden;}
 .play-strip figcaption{color:var(--faint);font-size:1rem;margin-top:10px;line-height:1.5;font-style:italic;}
 .play-link{margin-top:22px;color:var(--faint);font-style:italic;}
 @media (max-width:840px){.play-strip{grid-template-columns:1fr;}}
+
+/* landscape document cards (slide decks) and a short lead under a section heading */
+.card .thumb.wide{aspect-ratio:16/9;}
+.card .thumb.wide img{object-position:center;}
+.section-intro{color:var(--muted);font-size:1.1rem;max-width:68ch;margin:-14px 0 32px;}
+.section-intro .link{margin-left:6px;white-space:nowrap;}
